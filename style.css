@@ -1,0 +1,96 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F2F2F2;
+    color: #222222;
+}
+
+.cabecalho {
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: #222222;
+    color: #FFF;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.conteudo {
+    width: 70%;
+    margin: 50px auto;
+}
+
+.box {
+    background-color: #FFF;
+    padding: 25px;
+    margin-bottom: 40px;
+}
+
+.box h2 {
+    margin-bottom: 5px;
+}
+
+.box > p {
+    margin-bottom: 15px;
+}
+
+/* NÍVEL 1 - CATÁLOGO */
+
+.box .catalogo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.catalogo .filme {
+    border: 1px solid #CCCCCC;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.catalogo .filme img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.catalogo .filme h3, .catalogo .filme p {
+    padding: 10px;
+}
+
+/* NÍVEL 2 - FILMES EM DESTAQUE */
+
+.destaque-grid {
+    grid-template-rows: repeat(2, 180px);
+    grid-auto-rows: 180px;
+}
+
+.destaque-grid .filme {
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.destaque-grid .filme img {
+    height: 100%;
+    min-height: 0;
+}
+
+.filme-destaque {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.filme-destaque h3 {
+    padding-bottom: 0;
+}
+
+.filme-destaque p {
+    padding-top: 5px;
+}
